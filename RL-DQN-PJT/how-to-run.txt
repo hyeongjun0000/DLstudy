@@ -1,0 +1,25 @@
+실행 전
+# 1. 가상환경 생성 및 접속
+conda create -n rl_env python=3.9 -y
+conda activate rl_env
+
+# 2. 필수 라이브러리 설치 (버전 호환성 맞춤)
+pip install "tensorflow<2.16" "numpy<2.0" "gym[classic_control]==0.25.2" matplotlib
+
+# 3. 결과 저장용 폴더 생성
+mkdir save_graph save_model
+
+실행
+Base'''
+% cd /해당파일
+% python3 training.py << 실행하면 점수가 400점 넘어서 자동으로 꺼질 때까지 대기(학습)
+% python3 test.py << 실행하면 똑똑해진 agent가 막대리를 세우는 모습.
+'''
+
+실행 후
+
+conda deactivate (현재 활성화된 환경 끄고 base로 돌아가는 명령)
+
+conda env remove -n rl_env , [y] (삭제)
+
+conda env list << 이걸로 확실히 지워졌나 확인
